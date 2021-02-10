@@ -57,6 +57,10 @@ body {
   user-select: none;
 }
 
+.clickable:hover {
+  color: orangered;
+}
+
 /* Images Container */
 .images-container {
   margin-top: 50px;
