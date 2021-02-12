@@ -52,8 +52,9 @@ function updateDOM() {
      const date = document.createElement('strong');
      date.textContent = result.date;
      // Copyright
+     const copyrightResult = result.copyright === undefined ? '' : result.copyright;
      const copyright = document.createElement('span');
-     copyright.textContent = ` ${result.copyright}`;
+     copyright.textContent = ` ${copyrightResult}`;
 
      // Appending elements
      footer.append(date, copyright);
