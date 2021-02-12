@@ -1,4 +1,8 @@
-const resultsNav = document
+const resultsNav = document.getElementById('resultsNav');
+const favuritesNav = document.getElementById('favoritesNav');
+const imagesContainer = document.querySelector('.images-container');
+const saveConfirmed = document.querySelector('.save-confirmed');
+const loader = document.querySelector('.laoder');
 
 // NASA API KEY
 const count = 10;
