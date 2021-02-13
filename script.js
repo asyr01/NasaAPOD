@@ -82,7 +82,14 @@ async function getNasaPictures() {
 
 // Add result to Favorites
 function saveFavorite(itemUrl) {
-  console.log(itemUrl);
+  //Loop through Result arrays to select Favorite which matches url
+  resultsArray.forEach((item) => {
+    if(item.url.includes(itemUrl)){
+     favorites[itemUrl] = item;
+    } else {
+      
+    }
+  });
 }
 
 // On load.
