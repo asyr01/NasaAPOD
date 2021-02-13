@@ -86,6 +86,11 @@ function saveFavorite(itemUrl) {
   resultsArray.forEach((item) => {
     if(item.url.includes(itemUrl)){
      favorites[itemUrl] = item;
+     // Show added to favourites notification with saveConfirmed
+     saveConfirmed.hidden = false;
+     setTimeout(() => {
+       saveConfirmed.hidden = true;
+     }, 2000)
     } else {
       
     }
