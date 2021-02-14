@@ -110,10 +110,18 @@ function saveFavorite(itemUrl) {
      }, 2000);
      // Set favorites in localStorage
      localStorage.setItem('nasaFavorites', JSON.stringify(favorites));
-    } else {
-      
     }
   });
+}
+
+// Remove item from Favorites
+function removeFavorite(itemUrl) {
+  if(favorites[itemUrl]){
+    delete favorites[itemUrl];
+    //Set favorites in localStorage
+    localStorage.setItem('nasaFavorites', JSON.stringify(favorites));
+    updateDOM('favorites');
+  }
 }
 
 // On load.
