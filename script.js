@@ -42,8 +42,13 @@ function createDOMNodes(page) {
     // -SaveText-
     const saveText = document.createElement('p');
     saveText.classList.add('clickable');
-    saveText.textContent = 'Add it to the your Favourites!';
-    saveText.setAttribute('onclick', `saveFavorite('${result.url}')`);
+    if(page==='results') {
+      saveText.textContent = 'Add it to the your Favourites!';
+      saveText.setAttribute('onclick', `saveFavorite('${result.url}')`);
+    } else {
+      saveText.textContent = 'Remove it from the your Favourites!';
+      saveText.setAttribute('onclick', `removeFavorite('${result.url}')`);
+    }
     // -CardText-
     const cardText = document.createElement('p');
     cardText.classList.add('card-text');
