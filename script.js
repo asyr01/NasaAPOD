@@ -78,10 +78,8 @@ function updateDOM(page) {
   // Get Favorites from local storage
   if(localStorage.getItem('nasaFavorites')){
      favorites = JSON.parse(localStorage.getItem('nasaFavorites'));
-     
-  }else {
-
   }
+  imagesContainer.textContent = '';
   createDOMNodes(page);
 }
 
