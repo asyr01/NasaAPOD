@@ -13,6 +13,10 @@ let resultsArray = [];
 let favorites = {};
 
 function showContent() {
+  // Reload the scroll location to the top
+  window.scrollTo({
+    top:0, behavior:'instant'
+  });
   loader.classList.add('hidden');
 }
 
