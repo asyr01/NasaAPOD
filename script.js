@@ -78,9 +78,13 @@ function createDOMNodes(page) {
     const copyrightResult = result.copyright === undefined ? '' : result.copyright;
     const copyright = document.createElement('span');
     copyright.textContent = ` ${copyrightResult}`;
+    // Show image button
+    const showImage = document.createElement('button');
+    showImage.classList.add('show-image');
+    showImage.textContent = 'Take a look at the image'
 
     // Appending elements
-    footer.append(date, copyright);
+    footer.append(date, copyright, showImage);
     cardBody.append(cardTitle, saveText, cardText, footer);
     link.appendChild(image);
     card.append(link, cardBody);
