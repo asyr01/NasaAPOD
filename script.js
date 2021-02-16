@@ -28,7 +28,6 @@ function showContent(page) {
 }
 
 function createDOMNodes(page) {
-  console.log(page);
   const currentArray = page === 'results' ? resultsArray : Object.values(favorites);
   currentArray.forEach((result) => {
     // Card container element
