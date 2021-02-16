@@ -44,6 +44,7 @@ function createDOMNodes(page) {
     image.alt = "NASA Astronomy Picture of the Day";
     image.loading = 'lazy';
     image.classList.add('card-img-top');
+    image.hidden = true;
 
     // Card body elements
     const cardBody = document.createElement('div');
@@ -81,8 +82,11 @@ function createDOMNodes(page) {
     // Show image button
     const showImage = document.createElement('button');
     showImage.classList.add('show-image');
-    showImage.textContent = 'Take a look at the image'
-
+    showImage.textContent = 'Take a look at the image';
+    showImage.addEventListener('click', () => {
+      image.hidden = false;
+    })
+    
     // Appending elements
     footer.append(date, copyright, showImage);
     cardBody.append(cardTitle, saveText, cardText, footer);
